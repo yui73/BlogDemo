@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>{{ siteInfo_list.name}}</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        {% include 'navigation.html' %}
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url({% static 'assets/img/tag-bg.jpg' %})">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Tag</h1>
+{#                            <h2 class="subheading">{{ siteInfo_list.post_subheading }}</h2>#}
+{#                            <span class="meta">#}
+{#                                Posted by#}
+{#                                <a href="#!">Start Bootstrap</a>#}
+{#                                on August 24, 2022#}
+{#                            </span>#}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <!-- Tag content -->
+                        <!-- 标签云 -->
+                        <div class="col-xl-8" style="text-align: center;position: center">
+                        {% for tag in all_tag %}
+{#                            <a href="{% url 'tag'%}?id={{ tag.id }}" style="font-size: larger">#}
+                            <a href="{% url 'tag'%}?id={{ tag.id }}"
+                                    {% if tag.article_set.count <= 1 %}
+                               style="font-size: 15px; color: #999"
+                                    {% elif tag.article_set.count <= 2%}
+                               style="font-size: 20px; color: #666"
+                                    {% elif tag.article_set.count <= 5 %}
+                               style="font-size: 25px; color: #444"
+                                    {% elif tag.article_set.count <= 10 %}
+                               style="font-size: 30px; color: #222"
+                                    {% elif tag.article_set.count <= 20 %}
+                               style="font-size: 35px; color: #111"
+                                    {% else %}
+                               style="font-size: 40px; color: #000"
+                                    {% endif %}>
+                            {{ tag.name }}
+                            </a>
+                        {% endfor %}
+                        </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        {% include 'footer.html' %}
+        <!-- Bootstrap core JS-->
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+    </body>
+</html>

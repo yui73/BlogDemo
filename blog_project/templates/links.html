@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>{{ siteInfo_list.name}}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <!-- Code highlight CSS-->
+    <link rel="stylesheet" href="{% static 'md_css/styles.css' %}">
+</head>
+
+<body>
+    <!-- Navigation-->
+    {% include 'navigation.html' %}
+    <!-- Page Header-->
+    {#        <header class="masthead" style="background-image: url({% static 'assets/img/about-bg.jpg' %})">#}
+    <header class="masthead" style="background-image: url({{links_info.banner_img.url}})">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="site-heading">
+                        <h1>{{ links_info.heading }}</h1>
+                        <span class="subheading">{{ links_info.subheading }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% comment %}  {% endcomment %}
+
+    <main class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                {% for link in links %}
+                <div class="col-xl-3" style="text-align: center;position: center">
+                <a href="{{ link.callback_url }}">
+                    <img src="{{link.avatar.url}}"
+                        style="width:100px;height:100px;border-radius: 50%;vertical-align: middle;" class="img-fluid"
+                        alt="Avatar">
+                        <p>
+                    <b>
+                        {{ link.title }}
+                    </b>
+                    </p>
+                    <p style="font-size: medium">
+                        {{ link.description }}
+                    </p>
+                </a>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- 重写div 网格 -->
+            {% comment %} {% for link in links %}
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+
+                <div class="col-md-3 col-lg-8 col-xl-7">
+                    <!-- 头像部分 -->
+
+                    <div style="text-align: center;position: center">
+                        <img src="{{link.avatar.url}}"
+                            style="width:10%;height:10%;border-radius: 50%;vertical-align: middle;" class="img-fluid"
+                            alt="Avatar">
+                        {{ link.title }}
+                        <b style="font-size: small">
+                            {{ link.description }}
+                        </b>
+                    </div>
+
+                </div>
+                {% endfor %} {% endcomment %}
+            </div>
+    </main>
+
+    <!-- Footer-->
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="small text-center text-muted fst-italic">Copyright &copy;
+                        {{ siteInfo_list.name }} {{ year }}</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS顺序不可变 -->
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <!-- Bootstrap core JS-->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Core theme JS-->
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+
+</html>

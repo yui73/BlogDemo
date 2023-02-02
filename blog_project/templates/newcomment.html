@@ -1,0 +1,57 @@
+{% load static %}
+<header>
+    <!-- load MUI -->
+    <link href="{% static '/mui/css/mui.css' %}" rel="stylesheet" type="text/css" />
+    <script src="{% static 'mui/js/mui.min.js' %}"></script>
+</header>
+
+<!-- Comment -->
+
+{#<p>快来发布评论吧</p>#}
+<div class="my-5">
+    <div class="card">
+        <!-- * * * * * * * * * * * * * * *-->
+        <!-- * * * * * MUI  Form * * * * *-->
+        <!-- * * * * * * * * * * * * * * *-->
+        <!-- 未登录 -->
+        {% if not request.user.is_authenticated %}
+        <div class="card">
+            <div class="card-body">
+                登录后才可以评论...
+            </div>
+        </div>
+        {% else %}
+        <!-- 已登录 -->
+        <!-- 重新画网格 -->
+        <div class="row align-items-center" style="padding: 10px">
+            <div class="col-2">
+                <!-- 头像 -->
+                <div style="text-align: center;">
+                    <img src="{{ request.user.avatar.url }}"
+                        style="width:100%;height:100%;border-radius: 50%;vertical-align: middle;" class="img-fluid"
+                        alt="Avatar">
+                    {{ request.user.username }}
+
+                </div>
+            </div>
+            <div class="col-10">
+                <p></p>
+                <form class="mui-form" style="padding: 0px" action="{% url 'comment_post' %}?id={{ article.id }}" method="post">
+                    {% csrf_token %}
+                    {#                    <legend>快来发布评论吧</legend>#}
+                    {#        <div class="mui-textfield">#}
+                    {#            <input type="text">#}
+                    {#            {{ comment_form.author }}#}
+                    {#            <label>名字</label>#}
+                    {#        </div>#}
+                    <div class="mui-textfield">
+                        <label for="{{ comment_form.comment.id_for_label }}">快来发布评论吧</label>
+                        {{ comment_form.comment }}
+                    </div>
+                    <button type="submit" class="mui-btn mui-btn--raised" style="float:right;">发表评论</button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

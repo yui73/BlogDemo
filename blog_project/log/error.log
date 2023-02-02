@@ -1,0 +1,57 @@
+2022-05-07 20:47:37,666 [Thread-1:10984] [blog.views:65] [views:archives_view] [ERROR]- Cannot resolve keyword 'data_publish' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2022-05-07 20:48:28,325 [Thread-1:11256] [blog.views:66] [views:archives_view] [ERROR]- Cannot resolve keyword 'data_publish' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2022-05-07 20:50:18,421 [Thread-1:12064] [blog.views:66] [views:archives_view] [ERROR]- Cannot resolve keyword 'data_publish' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2022-05-07 20:51:27,295 [Thread-3:16712] [blog.views:66] [views:archives_view] [ERROR]- Cannot resolve keyword 'data_publish' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2022-05-07 20:52:11,145 [Thread-1:7908] [blog.views:66] [views:archives_view] [ERROR]- Cannot resolve keyword 'data_publish' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2022-05-07 20:53:34,319 [Thread-4:9028] [blog.views:66] [views:archives_view] [ERROR]- Cannot resolve keyword 'data_publish' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2022-05-07 20:55:22,923 [Thread-1:14524] [blog.views:66] [views:archives_view] [ERROR]- Cannot resolve keyword 'data_publish' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2022-05-07 20:56:17,686 [Thread-3:11684] [blog.views:66] [views:archives_view] [ERROR]- Cannot resolve keyword 'data_publish' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2022-05-07 20:56:24,201 [Thread-5:18712] [blog.views:66] [views:archives_view] [ERROR]- Cannot resolve keyword 'data_publish' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2022-05-07 20:57:19,110 [Thread-1:10828] [blog.views:66] [views:archives_view] [ERROR]- Cannot resolve keyword 'data_publish' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2022-05-07 20:57:46,823 [Thread-2:16252] [blog.views:66] [views:archives_view] [ERROR]- Cannot resolve keyword 'data_publish' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2022-05-07 20:58:02,936 [Thread-3:6080] [blog.views:66] [views:archives_view] [ERROR]- Cannot resolve keyword 'data_publish' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2022-05-07 21:30:00,388 [Thread-1:6424] [blog.views:72] [views:archives_view] [ERROR]- list indices must be integers or slices, not str
+2022-05-09 14:17:00,131 [Thread-1:19772] [blog.views:98] [views:article_view] [ERROR]- __init__() takes 1 positional argument but 2 were given
+2022-05-09 14:17:22,778 [Thread-1:19772] [blog.views:98] [views:article_view] [ERROR]- __init__() takes 1 positional argument but 2 were given
+2022-05-09 14:17:30,183 [Thread-1:19772] [blog.views:98] [views:article_view] [ERROR]- __init__() takes 1 positional argument but 2 were given
+2022-05-09 14:17:33,125 [Thread-1:19772] [blog.views:98] [views:article_view] [ERROR]- __init__() takes 1 positional argument but 2 were given
+2022-05-09 15:42:00,218 [Thread-1:16556] [blog.views:116] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:43:52,761 [Thread-1:17384] [blog.views:116] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:44:09,233 [Thread-5:17228] [blog.views:116] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:44:58,019 [Thread-1:9028] [blog.views:115] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:45:00,819 [Thread-1:9028] [blog.views:115] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:46:57,898 [Thread-1:5804] [blog.views:115] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:47:02,135 [Thread-1:5804] [blog.views:115] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:47:05,669 [Thread-1:5804] [blog.views:115] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:47:36,222 [Thread-2:19252] [blog.views:115] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:50:07,312 [Thread-1:18764] [blog.views:115] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:50:11,561 [Thread-1:18764] [blog.views:115] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:50:23,368 [Thread-2:3092] [blog.views:115] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:52:17,618 [Thread-1:20356] [blog.views:114] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:52:19,386 [Thread-1:20356] [blog.views:114] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:53:06,264 [Thread-1:18364] [blog.views:115] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:53:30,710 [Thread-1:17624] [blog.views:115] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 15:53:33,574 [Thread-1:17624] [blog.views:115] [views:about_view] [ERROR]- 'QuerySet' object has no attribute 'self_desc'
+2022-05-09 20:32:25,501 [Thread-6:19600] [blog.views:121] [views:about_view] [ERROR]- AboutManager matching query does not exist.
+2022-05-11 19:02:49,883 [Thread-1:14136] [blog.views:114] [views:article_view] [ERROR]- ['“3”的值有一个错误的日期格式。它的格式应该是YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] ']
+2022-05-11 19:59:07,013 [Thread-1:20204] [blog.views:175] [views:tag_view] [ERROR]- Cannot resolve keyword 'tag_contains' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2022-05-11 19:59:49,026 [Thread-1:2972] [blog.views:175] [views:tag_view] [ERROR]- Related Field got invalid lookup: contains
+2022-05-11 19:59:50,258 [Thread-1:2972] [blog.views:175] [views:tag_view] [ERROR]- Related Field got invalid lookup: contains
+2022-05-11 20:00:07,201 [Thread-1:19048] [blog.views:175] [views:tag_view] [ERROR]- Related Field got invalid lookup: contains
+2022-05-11 20:00:08,219 [Thread-1:19048] [blog.views:175] [views:tag_view] [ERROR]- Related Field got invalid lookup: contains
+2022-05-11 20:15:48,973 [Thread-2:7716] [blog.views:176] [views:tag_view] [ERROR]- 'Article_tag' object has no attribute 'title'
+2022-05-11 20:15:51,645 [Thread-2:7716] [blog.views:176] [views:tag_view] [ERROR]- 'Article_tag' object has no attribute 'title'
+2022-05-11 20:22:01,977 [Thread-3:7576] [blog.views:177] [views:tag_view] [ERROR]- module 'django.db.models' has no attribute 'Article'
+2022-05-11 20:25:43,448 [Thread-1:16392] [blog.views:177] [views:tag_view] [ERROR]- Related Field got invalid lookup: contains
+2022-05-11 20:25:58,875 [Thread-3:6264] [blog.views:177] [views:tag_view] [ERROR]- Related Field got invalid lookup: contains
+2022-05-11 20:31:08,864 [Thread-1:16404] [blog.views:179] [views:tag_view] [ERROR]- Related Field got invalid lookup: contains
+2022-05-11 20:31:36,286 [Thread-1:15192] [blog.views:179] [views:tag_view] [ERROR]- 'Tag' object has no attribute 'title'
+2022-06-06 10:39:09,325 [Thread-1:19748] [blog.views:183] [views:article_view] [ERROR]- 'QuerySet' object has no attribute 'avatar'
+2022-06-06 10:41:54,657 [Thread-1:8744] [blog.views:184] [views:article_view] [ERROR]- 'QuerySet' object has no attribute 'avatar'
+2022-06-06 10:42:27,595 [Thread-3:18792] [blog.views:184] [views:article_view] [ERROR]- 'QuerySet' object has no attribute 'avatar'
+2022-06-06 10:44:05,062 [Thread-1:20692] [blog.views:184] [views:article_view] [ERROR]- 'QuerySet' object has no attribute 'avatar'
+2022-06-06 10:47:17,832 [Thread-1:6520] [blog.views:189] [views:article_view] [ERROR]- 'QuerySet' object has no attribute 'avatar'
+2022-06-06 10:47:18,736 [Thread-1:6520] [blog.views:189] [views:article_view] [ERROR]- 'QuerySet' object has no attribute 'avatar'
+2022-06-06 10:48:17,511 [Thread-1:22796] [blog.views:191] [views:article_view] [ERROR]- 'QuerySet' object has no attribute 'avatar'
+2022-06-06 10:48:18,762 [Thread-1:22796] [blog.views:191] [views:article_view] [ERROR]- 'QuerySet' object has no attribute 'avatar'
+2022-06-06 10:48:38,337 [Thread-1:15596] [blog.views:192] [views:article_view] [ERROR]- 'QuerySet' object has no attribute 'avatar'

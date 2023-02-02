@@ -1,0 +1,93 @@
+{% load static %}
+
+<!-- Comment -->
+<div> 共计{{ comment_count }}篇评论</div>
+{% for comment in comment_list %}
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <div class="row"></div>
+        <!-- 父评论 画框 -->
+        <div id="ParentComment" class="row">
+            <!-- 头像框 -->
+            <div class="col-2">
+                <div style="text-align: center;">
+                    <img src="{{ comment.avatar.url }}"
+                         style="width:90%;height:90%;border-radius: 50%;vertical-align: middle;" class="img-fluid"
+                         alt="Avatar">
+
+                </div>
+            </div>
+            <!-- 评论正文 -->
+            <div class="col-10">
+            <p class="comment_username" style="color: #0a53be;font-size: medium;margin: auto">{{ comment.username}}
+                <a type="button" data-bs-toggle="modal" data-bs-target="#ReplyModal{{ comment.id }}"><i class="fa fa-comment"></i></a></p>
+
+            <p class="comment_content" style="margin: auto">{{ comment.content }}</p>
+            <p class="comment_date_publish" style="font-size: medium;color: #6c757d;margin: auto">{{ comment.date_publish }}</p>
+            </div>
+        </div>
+            <!-- 回复评论弹窗 只加载一次 -->
+            <div class="modal fade" id="ReplyModal{{ comment.id }}">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <!-- 模态框头部 -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">回复 {{ comment.username }} </h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- 模态框内容 -->
+                        <div class="modal-body">
+                            <form class="mui-form" style="padding: 0px" action="{% url 'comment_post' %}?id={{ article.id }}" method="post">
+                                {% csrf_token %}
+                                <div class="mui-textfield">
+                                    <label for="{{ comment_form.comment.id_for_label }}">要友善的回复哦~</label>
+                                    {{ comment_form.comment }}
+                                </div>
+                                <button type="submit" class="mui-btn mui-btn--raised" style="float:right;">发表评论</button>
+                                <!-- form隐形传递pid -->
+                                <input type="hidden" name="pid" value="{{ comment.id }}">
+                            </form>
+                        </div>
+
+                        <!-- 模态框底部 -->
+{#                        <div class="modal-footer">#}
+{#                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">关闭</button>#}
+{#                        </div>#}
+
+                    </div>
+                </div>
+            </div>
+        <!-- 循环取出子评论 -->
+        {% for children_comment in comment.children_comment %}
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div id="ChildrenComment" class="row">
+                        <div><br></div>
+                        <!-- 头像框 -->
+                        <div class="col-2" style="padding: 0px;">
+                            <div style="text-align: right;vertical-align: middle !important;margin: auto">
+                                <img src="{{ children_comment.avatar.url }}"
+                                     style="width:50%;height:50%;border-radius: 50%;" class="img-fluid"
+                                     alt="Avatar">
+                            </div>
+                        </div>
+                        <!-- 评论正文 -->
+                        <div class="col-10">
+                        <p class="children_comment_username" style="color: #0a53be;font-size: smaller;margin: auto">{{ children_comment.username }}</p>
+                    <p class="children_comment_content" style="font-size: small;margin: auto">{{ children_comment.content }}</p>
+                    <p class="children_comment_date_publish" style="font-size: smaller;color: #6c757d;margin: auto">{{ children_comment.date_publish }}</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        {% endfor %}
+        </li>
+    </ul>
+    <br><br>
+{% endfor %}
+
+
+<hr class="my-4" />
+

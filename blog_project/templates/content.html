@@ -1,0 +1,14 @@
+{% load static %}
+
+<!-- 目录有bug 重新布局 分成2块--><!-- 嵌入目录 -->
+<div class="col-md-1 col-lg-2 col-xl-3">
+    <div class="card" style="position: sticky">
+        <div class="card-header">
+            <i class="fa fa-list"></i>
+            <b style="font-size: larger">目录</b>
+        </div>
+        <div class="card-body">
+            {{ article.toc|safe }}
+        </div>
+    </div>
+</div>
